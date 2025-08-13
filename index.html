@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To‑Do List — HTML · CSS · TypeScript</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1>To‑Do</h1>
+      <form id="new-todo-form" autocomplete="off" aria-label="Add a new task">
+        <input id="new-todo-input" type="text" placeholder="What needs to be done?" aria-label="New task"/>
+        <button type="submit" class="btn add">Add</button>
+      </form>
+    </header>
+
+    <section class="controls" aria-label="Controls">
+      <div class="filters" role="tablist" aria-label="Filter tasks">
+        <button class="chip active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="chip" data-filter="active" role="tab" aria-selected="false">Active</button>
+        <button class="chip" data-filter="completed" role="tab" aria-selected="false">Completed</button>
+      </div>
+      <div class="bulk">
+        <button class="btn ghost" id="toggle-all">Toggle All</button>
+        <button class="btn danger" id="clear-completed">Clear Completed</button>
+      </div>
+    </section>
+
+    <ul id="todo-list" class="list" aria-live="polite" aria-label="To‑Do items"></ul>
+
+    <footer class="footer">
+      <span id="count"></span>
+      <span class="hint">Double‑click a task to edit. Press Enter to save.</span>
+    </footer>
+  </main>
+
+  <!-- Load the compiled JavaScript -->
+  <script src="app.js" type="module"></script>
+</body>
+</html>

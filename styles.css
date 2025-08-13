@@ -1,0 +1,42 @@
+*{box-sizing:border-box}html,body{height:100%}body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  background:#0b1020; color:#e6e8ee;
+}
+.app{max-width:720px;margin:48px auto;padding:24px}
+.header{display:flex;flex-direction:column;gap:16px;margin-bottom:16px}
+h1{margin:0;font-size:32px;letter-spacing:.5px}
+#new-todo-form{display:flex;gap:8px}
+#new-todo-input{
+  flex:1;padding:12px 14px;border-radius:14px;border:1px solid #283049;
+  outline:none;background:#0f1730;color:#e6e8ee;
+}
+#new-todo-input:focus{border-color:#7aa2ff;box-shadow:0 0 0 3px rgba(122,162,255,.2)}
+.btn{padding:10px 14px;border:none;border-radius:12px;cursor:pointer}
+.btn.add{background:#7aa2ff;color:#0b1020;font-weight:600}
+.btn.ghost{background:transparent;border:1px solid #344063;color:#c7cbe0}
+.btn.danger{background:#ff6b6b;color:#0b1020}
+.controls{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:10px 0 18px}
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.chip{padding:8px 12px;border-radius:999px;border:1px solid #344063;background:transparent;color:#c7cbe0;cursor:pointer}
+.chip.active{background:#1a2444;color:#cfd6ff;border-color:#3a4c7a}
+.list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.item{
+  display:grid;grid-template-columns:auto 1fr auto;align-items:center;
+  gap:10px;padding:12px;border:1px solid #283049;border-radius:14px;background:#0f1730;
+}
+.item.completed .title{text-decoration:line-through;opacity:.6}
+.checkbox{width:18px;height:18px;accent-color:#7aa2ff;cursor:pointer}
+.title{margin:0;line-height:1.35;word-break:break-word}
+.actions{display:flex;gap:8px}
+.icon-btn{background:transparent;border:1px solid #344063;border-radius:10px;padding:6px 8px;cursor:pointer;color:#c7cbe0}
+.icon-btn:hover{border-color:#7aa2ff}
+input.edit{
+  width:100%;padding:10px 12px;border-radius:10px;border:1px solid #344063;background:#0b1228;color:#e6e8ee;
+}
+.footer{display:flex;align-items:center;justify-content:space-between;margin-top:18px;color:#9aa3c7;font-size:14px}
+.hint{opacity:.8}
+@media (max-width:560px){
+  .controls{flex-direction:column;align-items:stretch}
+  .bulk{display:flex;gap:8px}
+}
